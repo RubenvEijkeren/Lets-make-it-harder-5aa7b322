@@ -12,7 +12,6 @@ if ($argv[1] === $argv[2]) {
 }
 else{
 	$diff = abs($argv[1] - $argv[2]);
-	echo $diff;
 	$values = explode(',', $argv[3]);
 	sort($values);
 	foreach ($values as $value) {
@@ -23,7 +22,7 @@ else{
 	}
 	$i = 0;
 	$j = count($values)-1;
-	while ($values[$i] != $values[$j]){
+	while ($i != $j){
 //		echo "i: " . $values[$i] ."j: " .  $values[$j]. PHP_EOL;
 		if ($values[$i] + $values[$j] == $diff) {
 			echo "Perfectly balanced, as all things should be...... but only if you add ".$values[$i] . " and " . $values[$j];
